@@ -1,11 +1,11 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 from django.contrib import admin
-from .models import Blog, Comment, CommentReply, Document, UserImage, UserInfo, Hashtag
-# Register your models here.
 
-admin.site.register(Blog)
-admin.site.register(Document)
-admin.site.register(Comment)
-admin.site.register(CommentReply)
-admin.site.register(UserImage)
-admin.site.register(UserInfo)
-admin.site.register(Hashtag)
+from .models import Post
+
+
+
+
+# Register your models here.
+admin.site.register(Post)

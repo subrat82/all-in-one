@@ -1,24 +1,19 @@
-from django.urls import path, include
-from blog import urls
+from django.conf.urls import url
 from . import views
 
-urlpatterns = [
-    path('', views.Homepage.as_view(), name='homepage'),
-    path('aboutus', views.AboutUs.as_view(), name="aboutus"),
-    path('post/<int:pk>', views.PostDetail, name='postdetail'),
-    path('newpost', views.newpost, name='newpost'),
-    path('usrinfo', views.user_image_func, name='usrinfo'),
-    path('postedit/<int:pk>', views.PostEdit.as_view(), name='postedit'),
-    path('postdelete/<int:pk>', views.BlogDelete.as_view(), name='postdelete'),
-    path('mypost/<author>', views.MyPost.as_view(), name='myposts'),
-    path('commentreplydelete/<int:pk>', views.CommentReplyDelete.as_view(), name='commentreplydelete'),
-    path('commentdelete/<int:pk>', views.CommentDelete.as_view(), name='commentdelete'),
-    path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/', include('accounts.urls')),
-    path('post/postnew', views.BlogPostNew.as_view(), name='postnew'),
-    path('profile/<str:nam>', views.profile, name='profile'),
-    path('editprofileinfo/<int:pk>', views.userInfoFormView, name='editprofileinfo'),
-    path('search', views.search, name='search'),
-    path('category/<str:hashtags>', views.categoryview, name='category'),
 
+# Our urlpatterns to be examined when django is redirected from djangogirls.urls
+
+urlpatterns = [
+
+	# Only an empty string will match
+	# In django URL resolvers, 'http:127.0.0.1:8000/' is not a part of URL
+	# This pattern will tell django that 'views.post.list' is the right place
+	# When someone visits 'http:127.0.0.1:8000/' 
+	# name='post_list' is the name used to identify the url used to identify view
+	url(r'^sys_info_page$', views.sys_info_page, name='sys_info_page'),
+	url(r'^$', views.post_list, name='post_list'),
+	url(r'^post/(?P<pk>\d+)/$', views.post_detail, name='post_detail'),
+	url(r'^post/new/$', views.post_new, name='post_new'),
+	url(r'^post/(?P<pk>\d+)/edit/$', views.post_edit, name='post_edit'),
 ]
