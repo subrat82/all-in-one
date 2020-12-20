@@ -1,21 +1,32 @@
-Static Website Example
-----------------------
-
-To be used with Cloud Academy labs.
-
-
-License
-----------------------
-
-This static website is based on the Dimension template by [HTML5 UP](https://html5up.net/)
-
-Creative Commons License
-All of the site templates I create for [HTML5 UP](https://html5up.net/) are licensed under the Creative Commons Attribution 3.0 License, which means you can:
- - Use them for personal stuff
- - Use them for commercial stuff
- - Change them however you like
+# BlogVlog
+Blog website with multi-user feature, comments system and unique style.
+<br><br>
+Made with Django2, Python3, Html5, Bootstrap, Mobirise, CSS3, js, jquery.
 
 
-... all for free, yo. In exchange, just give HTML5 UP credit for the design and tell your friends about it :)
+# features 
+- Blogs are categorised by hashtags
+- Login / Signup / Forgot Password
+- Comments and replies on every blog
+- Authenticated user can comment else they will prompted to login
+- Use HTML tags for formatting when writing a new post
+- Every profile has a view counter
+- Search Blog or Writer.
 
-More info [here](https://html5up.net/license).
+# Screenshots
+<blockquote>Homepage</blockquote>
+<br>
+<img src="https://image.ibb.co/hRBign/Screenshot_2018_4_13_homepage_4.jpg" alt="Screenshot 2018 4 13 homepage 4" border="0" />
+
+<br>
+<blockquote>Blog Details</blockquote>
+<br>
+<img src="https://image.ibb.co/iGx1j7/Screenshot_2018_4_14_homepage_1.jpg" alt="Screenshot_2018_4_14_homepage_1" border="0"><br>
+<br>
+
+<blockquote>Login Page</blockquote>
+<br>
+<img src="https://image.ibb.co/njp3gn/Screenshot_2018_4_13_homepage_2.png" alt="Screenshot 2018 4 13 homepage 2" border="0" />
+<br>
+
+# Thankyou
